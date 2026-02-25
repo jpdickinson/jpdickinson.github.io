@@ -4,6 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jayson Dickinson | Professional Portfolio</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -67,52 +73,61 @@
       <p style="text-align: center; margin-bottom: 2rem; color: var(--text-medium);">Here are some highlights of my professional work. <a href="projects.html" style="color: var(--primary-color); font-weight: 600;">View all projects →</a></p>
       <div class="projects-grid">
         
-        <div class="project-card">
+        <div class="project-card project-wireless">
+          <div class="project-image">
+            <i class="fas fa-broadcast-tower project-icon-large"></i>
+          </div>
           <div class="project-header">
-            <h3>Z-wave Long Range Protocol</h3>
+            <h3><i class="fas fa-wifi"></i> Z-wave Long Range Protocol</h3>
             <span class="project-date">2024 - Present</span>
           </div>
           <p class="project-description">Developed a repeatable and scalable testing framework for the Z-wave Long Range protocol, standardizing device interoperability testing and improving product quality across the ecosystem.</p>
           <div class="project-tags">
-            <span class="tag-small">Quality Engineering</span>
-            <span class="tag-small">Z-wave Alliance</span>
-            <span class="tag-small">Protocol Testing</span>
+            <span class="tag-small"><i class="fas fa-vial"></i> Quality Engineering</span>
+            <span class="tag-small"><i class="fas fa-certificate"></i> Z-wave Alliance</span>
+            <span class="tag-small"><i class="fas fa-check-circle"></i> Protocol Testing</span>
           </div>
           <div class="project-links">
-            <a href="projects.html" class="project-link">View Details →</a>
+            <a href="projects.html" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card project-space">
+          <div class="project-image">
+            <i class="fas fa-rocket project-icon-large"></i>
+          </div>
           <div class="project-header">
-            <h3>NASA Artemis Mission Rover</h3>
+            <h3><i class="fas fa-satellite"></i> NASA Artemis Mission Rover</h3>
             <span class="project-date">2020 - 2021</span>
           </div>
           <p class="project-description">Utilized SysML and MBSE methodologies to design a prototype rover for NASA's Artemis mission, capable of seamlessly transitioning between lunar and Martian terrain with autonomous operation.</p>
           <div class="project-tags">
-            <span class="tag-small">Systems Engineering</span>
-            <span class="tag-small">NASA</span>
-            <span class="tag-small">MBSE</span>
-            <span class="tag-small">Aerospace</span>
+            <span class="tag-small"><i class="fas fa-cogs"></i> Systems Engineering</span>
+            <span class="tag-small"><i class="fas fa-space-shuttle"></i> NASA</span>
+            <span class="tag-small"><i class="fas fa-project-diagram"></i> MBSE</span>
+            <span class="tag-small"><i class="fas fa-plane-departure"></i> Aerospace</span>
           </div>
           <div class="project-links">
-            <a href="projects.html" class="project-link">View Details →</a>
+            <a href="projects.html" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card project-health">
+          <div class="project-image">
+            <i class="fas fa-heartbeat project-icon-large"></i>
+          </div>
           <div class="project-header">
-            <h3>Macro Calculator Application</h3>
+            <h3><i class="fas fa-calculator"></i> Macro Calculator Application</h3>
             <span class="project-date">2023</span>
           </div>
           <p class="project-description">Created a Python-based application using AI to calculate ideal macronutrient intake and generate personalized meal plans, now used by 25+ weekly users at an Asheville gym.</p>
           <div class="project-tags">
-            <span class="tag-small">Python</span>
-            <span class="tag-small">AI</span>
-            <span class="tag-small">App Development</span>
+            <span class="tag-small"><i class="fab fa-python"></i> Python</span>
+            <span class="tag-small"><i class="fas fa-brain"></i> AI</span>
+            <span class="tag-small"><i class="fas fa-mobile-alt"></i> App Development</span>
           </div>
           <div class="project-links">
-            <a href="projects.html" class="project-link">View Details →</a>
+            <a href="projects.html" class="project-link">View Details <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
 
@@ -213,7 +228,7 @@
         
         <!-- Certification Item -->
         <div class="cert-card">
-          <div class="cert-icon">📜</div>
+          <div class="cert-icon"><i class="fas fa-award"></i></div>
           <h3>Certified Quality Engineer (CQE)</h3>
           <p class="cert-issuer">American Society for Quality (ASQ)</p>
           <p class="cert-date">Issued: Dec 2025</p>
@@ -222,7 +237,7 @@
 
         <!-- Accomplishment Item -->
         <div class="cert-card">
-          <div class="cert-icon">🏆</div>
+          <div class="cert-icon"><i class="fas fa-star"></i></div>
           <h3>Achievement or Award</h3>
           <p class="cert-issuer">Organization/Company</p>
           <p class="cert-date">Year</p>
@@ -231,7 +246,7 @@
 
         <!-- Add more as needed -->
         <div class="cert-card">
-          <div class="cert-icon">🎓</div>
+          <div class="cert-icon"><i class="fas fa-certificate"></i></div>
           <h3>Professional Development</h3>
           <p class="cert-issuer">Training Provider</p>
           <p class="cert-date">Completed: Year</p>
@@ -250,15 +265,15 @@
         <p class="contact-intro">Interested in collaborating or learning more about my work? I'd love to hear from you.</p>
         <div class="contact-methods">
           <a href="mailto:jaysondwrx@gmail.com" class="contact-item">
-            <span class="contact-icon">✉️</span>
+            <span class="contact-icon"><i class="fas fa-envelope"></i></span>
             <span>jaysondwrx@gmail.com</span>
           </a>
           <a href="https://linkedin.com/in/jayson-dickinson-869966bb" target="_blank" class="contact-item">
-            <span class="contact-icon">💼</span>
+            <span class="contact-icon"><i class="fab fa-linkedin-in"></i></span>
             <span>LinkedIn</span>
           </a>
           <a href="https://github.com/jpdickinson" target="_blank" class="contact-item">
-            <span class="contact-icon">💻</span>
+            <span class="contact-icon"><i class="fab fa-github"></i></span>
             <span>GitHub</span>
           </a>
         </div>
