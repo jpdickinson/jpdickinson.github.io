@@ -439,26 +439,34 @@ body {
 
 /* NASA Rocket Takeoff Animation */
 .project-space:hover .project-icon-large {
-  animation: rocketTakeoff 3s ease-in-out;
+  animation: rocketTakeoff 4s ease-in-out infinite;
   transform: none;
 }
 
 @keyframes rocketTakeoff {
   0% {
-    transform: translateY(0) rotate(0deg) scale(1);
+    transform: translateY(0) scale(1);
+    opacity: 1;
   }
-  20% {
-    transform: translateY(-10px) rotate(-5deg) scale(1.05);
+  25% {
+    transform: translateY(-80px) scale(1.1);
+    opacity: 1;
   }
-  40% {
-    transform: translateY(-40px) rotate(5deg) scale(1.1);
+  50% {
+    transform: translateY(-160px) scale(0.6);
+    opacity: 0;
   }
-  60% {
-    transform: translateY(-120px) rotate(-3deg) scale(0.8);
+  51% {
+    transform: translateY(160px) scale(0.6);
+    opacity: 0;
+  }
+  75% {
+    transform: translateY(80px) scale(0.8);
+    opacity: 0.5;
   }
   100% {
-    transform: translateY(-200px) rotate(0deg) scale(0.5);
-    opacity: 0;
+    transform: translateY(0) scale(1);
+    opacity: 1;
   }
 }
 
@@ -474,7 +482,7 @@ body {
 }
 
 .project-space:hover .project-rover {
-  animation: roverRoll 3s ease-in-out 2s forwards;
+  animation: roverRoll 4s ease-in-out 1.5s infinite;
 }
 
 @keyframes roverRoll {
