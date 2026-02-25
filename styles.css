@@ -438,34 +438,29 @@ body {
 }
 
 /* NASA Rocket Takeoff Animation */
+.project-space .project-icon-large {
+  transform: rotate(-45deg);
+}
+
 .project-space:hover .project-icon-large {
-  animation: rocketTakeoff 4s ease-in-out infinite;
-  transform: none;
+  animation: rocketTakeoff 5s ease-in-out forwards;
 }
 
 @keyframes rocketTakeoff {
   0% {
-    transform: translateY(0) scale(1);
+    transform: rotate(-45deg) translateY(0) scale(1);
     opacity: 1;
   }
-  25% {
-    transform: translateY(-80px) scale(1.1);
-    opacity: 1;
-  }
-  50% {
-    transform: translateY(-160px) scale(0.6);
+  15% {
+    transform: rotate(-45deg) translateY(-200px) scale(0.8);
     opacity: 0;
   }
-  51% {
-    transform: translateY(160px) scale(0.6);
+  85% {
+    transform: rotate(-45deg) translateY(-200px) scale(0.8);
     opacity: 0;
-  }
-  75% {
-    transform: translateY(80px) scale(0.8);
-    opacity: 0.5;
   }
   100% {
-    transform: translateY(0) scale(1);
+    transform: rotate(-45deg) translateY(0) scale(1);
     opacity: 1;
   }
 }
@@ -473,31 +468,39 @@ body {
 /* Rover Element Styling */
 .project-rover {
   position: absolute;
-  bottom: 20px;
-  left: -50px;
-  font-size: 2rem;
-  color: rgba(255, 255, 255, 0.9);
+  bottom: 30px;
+  left: -60px;
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.95);
   opacity: 0;
   z-index: 2;
 }
 
 .project-space:hover .project-rover {
-  animation: roverRoll 4s ease-in-out 1.5s infinite;
+  animation: roverRoll 5s ease-in-out forwards;
 }
 
 @keyframes roverRoll {
   0% {
-    left: -50px;
+    left: -60px;
     opacity: 0;
   }
-  10% {
+  15% {
+    left: -60px;
+    opacity: 0;
+  }
+  20% {
     opacity: 1;
   }
-  90% {
+  70% {
     opacity: 1;
+  }
+  75% {
+    left: calc(100% + 40px);
+    opacity: 0;
   }
   100% {
-    left: calc(100% + 20px);
+    left: calc(100% + 40px);
     opacity: 0;
   }
 }
