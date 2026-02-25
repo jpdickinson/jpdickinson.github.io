@@ -7,7 +7,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="styles.css" />
@@ -291,6 +291,32 @@
       <p><a href="blog.html">Visit My Blog</a> for personal updates and non-professional content.</p>
     </div>
   </footer>
+
+  <script>
+    // Random Background Images for About Section
+    // Add your own image URLs or local file paths here
+    const backgroundImages = [
+      'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80', // Technology/Space
+      'https://images.unsplash.com/photo-1517976487492-5750f3195933?w=1920&q=80', // Fitness/Gym
+      'https://images.unsplash.com/photo-1517976547714-720226b864c1?w=1920&q=80', // Engineering/Technical
+      'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=1920&q=80', // Abstract Tech
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&q=80', // Data/Analytics
+      // To use your own images:
+      // 1. Place image files in your project folder
+      // 2. Replace URLs above with: 'your-image-name.jpg'
+      // Example: 'gym-photo.jpg', 'nasa-project.jpg', 'zwave-testing.jpg'
+    ];
+
+    // Select a random image on page load
+    function setRandomBackground() {
+      const aboutSection = document.getElementById('about');
+      const randomIndex = Math.floor(Math.random() * backgroundImages.length);
+      aboutSection.style.backgroundImage = `url('${backgroundImages[randomIndex]}')`;
+    }
+
+    // Set background when page loads
+    window.addEventListener('load', setRandomBackground);
+  </script>
 
 </body>
 </html>
