@@ -335,8 +335,12 @@ body {
 }
 
 .project-card:hover .project-icon-large {
-  transform: scale(1.15) rotate(5deg);
   color: rgba(255, 255, 255, 1);
+}
+
+/* Default hover animation for non-animated project cards */
+.project-health:hover .project-icon-large {
+  transform: scale(1.15) rotate(5deg);
 }
 
 .project-card:hover .project-image {
@@ -366,14 +370,128 @@ body {
 /* Themed Project Images */
 .project-wireless .project-image {
   background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+  position: relative;
+  overflow: visible;
 }
 
 .project-space .project-image {
   background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+  position: relative;
+  overflow: hidden;
 }
 
 .project-health .project-image {
   background: linear-gradient(135deg, #059669 0%, #047857 100%);
+}
+
+/* Radio Wave Pulse Animation for Z-wave Project */
+.project-wireless .project-image::before,
+.project-wireless .project-image::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.project-wireless:hover .project-image::before {
+  animation: radioPulse 2s ease-out infinite;
+}
+
+.project-wireless:hover .project-image::after {
+  animation: radioPulse 2s ease-out infinite 1s;
+}
+
+.project-wireless:hover .project-icon-large {
+  animation: antennaTransmit 2s ease-in-out infinite;
+}
+
+@keyframes radioPulse {
+  0% {
+    width: 100px;
+    height: 100px;
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    width: 250px;
+    height: 250px;
+    opacity: 0;
+  }
+}
+
+@keyframes antennaTransmit {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* NASA Rocket Takeoff Animation */
+.project-space:hover .project-icon-large {
+  animation: rocketTakeoff 3s ease-in-out;
+  transform: none;
+}
+
+@keyframes rocketTakeoff {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  20% {
+    transform: translateY(-10px) rotate(-5deg) scale(1.05);
+  }
+  40% {
+    transform: translateY(-40px) rotate(5deg) scale(1.1);
+  }
+  60% {
+    transform: translateY(-120px) rotate(-3deg) scale(0.8);
+  }
+  100% {
+    transform: translateY(-200px) rotate(0deg) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* Rover Element Styling */
+.project-rover {
+  position: absolute;
+  bottom: 20px;
+  left: -50px;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+  opacity: 0;
+  z-index: 2;
+}
+
+.project-space:hover .project-rover {
+  animation: roverRoll 3s ease-in-out 2s forwards;
+}
+
+@keyframes roverRoll {
+  0% {
+    left: -50px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: calc(100% + 20px);
+    opacity: 0;
+  }
 }
 
 /* Themed Project Cards */
